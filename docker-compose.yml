@@ -1,7 +1,13 @@
 version: "3"
 services:
   hapi-fhir-jpaserver-start:
-    build: .
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      args:
+        BUILDKIT_INLINE_CACHE: 1
+      cache_from:
+        - docker.pkg.github.com/karlmdavis/fhir-benchmarks/hapi-fhir-jpaserver-start
     container_name: hapi-fhir-jpaserver-start
     restart: on-failure
     ports:
