@@ -158,3 +158,6 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# jabba is used to manage JDK/JRE installs.
+.jabbarc
